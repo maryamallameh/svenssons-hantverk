@@ -1,0 +1,62 @@
+html {
+    font-family: Inter, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-spacing: 0;
+}
+
+th,
+td {
+    border: 1px solid gray;
+    width: 3.5rem;
+    height: 1.2rem;
+    font-weight: normal;
+    font-size: 0.8rem;
+
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    padding-left: 0.3rem;
+    white-space: nowrap;
+    width: 12rem;
+}
+
+.blue-white {
+    background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, white 50%);
+}
+
+.pink {
+    background-color: rgb(205, 150, 205);
+}
+
+.gray {
+    background-color: rgb(140, 150, 155);
+}
+
+.blue {
+    background-color: rgb(78, 135, 155);
+}
+
+.white {
+    background-color: white;
+}
+
+.pink-purple {
+    background: linear-gradient(to bottom, rgb(205, 150, 205), 50%, rgb(140, 70, 140) 50%);
+}
+
+.pink-white {
+    background: linear-gradient(to bottom, rgb(205, 150, 205), 50%, white 50%);
+}
+
+.blue-blue {
+    background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, rgb(50, 100, 120) 50%);
+}
