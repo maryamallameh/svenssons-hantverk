@@ -65,14 +65,18 @@
         }
 
         const rowComponent = {
-            props: ['name', 'schedule'],
+            props: ['name', 'img', 'schedule'],
             template: `
                 <tr>
-                    <th class="name">{{ name }}</th>
+                    <th class="name">
+                        {{ name }}
+                        <img :src="img" class="icon">
+                    </th>
 
                     <td
-                        v-for="cell in schedule"
-                        :class="cell">
+                        v-for="(square, i) in schedule"
+                        :key="i"
+                        :class="square">
                     </td>
                 </tr>
             `
@@ -89,6 +93,7 @@
                     craftsmen: [
                         {
                             name: "Aiko Tanaka",
+                            img: "assets/paintbrush.png",
                             schedule: [
                                 "blue-white", "pink", "gray", "blue", "white",
                                 "blue-white", "pink", "gray", "blue", "white",
@@ -98,6 +103,7 @@
                         },
                         {
                             name: "Amina Hassan",
+                            img: "assets/bolt.png",
                             schedule: [
                                 "pink-purple", "pink-purple", "pink-white", "white", "gray",
                                 "pink-purple", "pink-purple", "pink-white", "white", "gray",
@@ -107,6 +113,7 @@
                         },
                         {
                             name: "Amara Okafor",
+                            img: "assets/paintbrush.png",
                             schedule: [
                                 "blue-white", "blue", "blue", "blue", "pink-white",
                                 "blue-white", "blue", "blue", "blue", "pink-white",
@@ -116,6 +123,7 @@
                         },
                         {
                             name: "Anouk Dubois",
+                            img: "assets/paintbrush.png",
                             schedule: [
                                 "gray", "pink", "pink", "blue", "blue-white",
                                 "gray", "pink", "pink", "blue", "blue-white",
@@ -125,6 +133,7 @@
                         },
                         {
                             name: "Arjun Patel",
+                            img: "assets/plunger.png",
                             schedule: [
                                 "blue", "blue", "pink-purple", "pink-white", "white",
                                 "blue", "blue", "pink-purple", "pink-white", "white",
@@ -134,6 +143,7 @@
                         },
                         {
                             name: "Björn Andersson",
+                            img: "assets/bricks.png",
                             schedule: [
                                 "pink", "pink-white", "blue-white", "white", "gray",
                                 "pink", "pink-white", "blue-white", "white", "gray",
@@ -161,6 +171,7 @@
                         },
                         {
                             name: "Elena Rossi",
+                            img: "assets/plunger.png",
                             schedule: [
                                 "white", "white", "blue-white", "blue-white", "gray",
                                 "white", "white", "blue-white", "blue-white", "gray",
@@ -170,6 +181,7 @@
                         },
                         {
                             name: "Fatima Al-Farsi",
+                            img: "assets/bolt.png",
                             schedule: [
                                 "blue", "pink-white", "blue", "white", "blue",
                                 "blue", "pink-white", "blue", "white", "blue",
@@ -179,6 +191,7 @@
                         },
                         {
                             name: "Freja Nielsen",
+                            img: "assets/bolt.png",
                             schedule: [
                                 "white", "white", "pink", "blue", "white",
                                 "white", "white", "pink", "blue", "white",
@@ -197,6 +210,7 @@
                         },
                         {
                             name: "Joon Park",
+                            img: "assets/hammer.png",
                             schedule: [
                                 "blue-white", "gray", "blue-white", "white", "pink",
                                 "blue-white", "gray", "blue-white", "white", "pink",
@@ -215,6 +229,7 @@
                         },
                         {
                             name: "Lars Johansson",
+                            img: "assets/plunger.png",
                             schedule: [
                                 "gray", "pink", "blue-blue", "blue", "white",
                                 "gray", "pink", "blue-blue", "blue", "white",
@@ -224,6 +239,7 @@
                         },
                         {
                             name: "Leila Haddad",
+                            img: "assets/bricks.png",
                             schedule: [
                                 "white", "blue-white", "gray", "white", "blue",
                                 "white", "blue-white", "gray", "white", "blue",
@@ -233,6 +249,7 @@
                         },
                         {
                             name: "Luca Bianchi",
+                            img: "assets/bricks.png",
                             schedule: [
                                 "pink", "white", "white", "pink", "blue-white",
                                 "pink", "white", "white", "pink", "blue-white",
@@ -242,6 +259,7 @@
                         },
                         {
                             name: "Mateo García",
+                            img: "assets/hammer.png",
                             schedule: [
                                 "blue", "pink-white", "blue", "gray", "white",
                                 "blue", "pink-white", "blue", "gray", "white",
@@ -251,6 +269,7 @@
                         },
                         {
                             name: "Mei Lin",
+                            img: "assets/paintbrush.png",
                             schedule: [
                                 "blue-white", "white", "white", "gray", "pink",
                                 "blue-white", "white", "white", "gray", "pink",
@@ -260,6 +279,7 @@
                         },
                         {
                             name: "Mila Ivanova",
+                            img: "assets/paintbrush.png",
                             schedule: [
                                 "white", "pink", "blue-white", "pink-white", "white",
                                 "white", "pink", "blue-white", "pink-white", "white",
@@ -269,6 +289,7 @@
                         },
                         {
                             name: "Noah Cohen",
+                            img: "assets/hammer.png",
                             schedule: [
                                 "pink-white", "blue-white", "white", "blue", "pink",
                                 "pink-white", "blue-white", "white", "blue", "pink",
@@ -278,6 +299,7 @@
                         },
                         {
                             name: "Omar Rahman",
+                            img: "assets/hammer.png",
                             schedule: [
                                 "pink", "blue", "gray", "white", "blue-white",
                                 "pink", "blue", "gray", "white", "blue-white",
@@ -287,6 +309,7 @@
                         },
                         {
                             name: "Priya Sharma",
+                            img: "assets/bricks.png",
                             schedule: [
                                 "gray", "blue-white", "pink", "pink", "gray",
                                 "gray", "blue-white", "pink", "pink", "gray",
@@ -296,6 +319,7 @@
                         },
                         {
                             name: "Saanvi Gupta",
+                            img: "assets/paintbrush.png",
                             schedule: [
                                 "pink-purple", "pink-white", "blue", "blue", "blue",
                                 "pink-purple", "pink-white", "blue", "blue", "blue",
@@ -305,6 +329,7 @@
                         },
                         {
                             name: "Tariq Khan",
+                            img: "assets/bolt.png",
                             schedule: [
                                 "pink", "blue", "blue-white", "blue", "white",
                                 "pink", "blue", "blue-white", "blue", "white",
@@ -314,6 +339,7 @@
                         },
                         {
                             name: "Thabo Ndlovu",
+                            img: "assets/bricks.png",
                             schedule: [
                                 "blue-blue", "blue", "blue", "pink", "gray",
                                 "blue-blue", "blue", "blue", "pink", "gray",
@@ -323,6 +349,7 @@
                         },
                         {
                             name: "Yara Saleh",
+                            img: "assets/plunger.png",
                             schedule: [
                                 "white", "gray", "white", "pink-white", "blue",
                                 "white", "gray", "white", "pink-white", "blue",
@@ -357,7 +384,7 @@
 
             <tbody>
                 <tr is="vue:row-component" v-for="person in craftsmen" :key="person.name" :name="person.name"
-                    :schedule="person.schedule"></tr>
+                    :img="person.img" :schedule="person.schedule"></tr>
             </tbody>
         </table>
     </div>

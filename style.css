@@ -24,7 +24,8 @@ td {
 .name {
     display: flex;
     align-items: center;
-    padding-left: 0.3rem;
+    justify-content: space-between;
+    padding-left: 0.5rem;
     white-space: nowrap;
     width: 12rem;
 }
