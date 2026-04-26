@@ -99,6 +99,16 @@ td {
     background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, rgb(50, 100, 120) 50%);
 }
 
+.button {
+    position: absolute;
+    right: 6.4rem;
+    margin-top: 1rem;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 142, 171);
+}
+
 .occupations {
     width: 60%;
     margin-top: 2rem;
