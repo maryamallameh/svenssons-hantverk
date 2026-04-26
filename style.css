@@ -44,18 +44,23 @@ body {
 }
 
 table {
+    border-right: 1px solid gray;
     border-spacing: 0;
     margin-top: 3rem;
 }
 
 th,
 td {
-    border: 1px solid gray;
+    border-bottom: 1px solid gray;
     width: 3.4rem;
     height: 1.2rem;
     font-weight: normal;
     font-size: 0.8rem;
 
+}
+
+th {
+    border: 1px solid gray;
 }
 
 .name {
@@ -119,6 +124,7 @@ td {
 .occupations {
     width: 60%;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
 }
