@@ -70,7 +70,7 @@
                 <tr>
                     <th class="name">
                         {{ name }}
-                        <img :src="img" class="icon">
+                        <img :src="img">
                     </th>
 
                     <td
@@ -376,6 +376,7 @@
 
 <body>
     <div id="app">
+        <img src="assets/logo.png" class="logo">
         <table>
             <thead>
                 <tr is="vue:weeks-component"></tr>
@@ -387,6 +388,14 @@
                     :img="person.img" :schedule="person.schedule"></tr>
             </tbody>
         </table>
+        <div class="occupations">
+            <p><u>Yrkesroller:</u></p>
+            <p><img src="assets/hammer.png" class="icon">Snickare</p>
+            <p><img src="assets/paintbrush.png" class="icon">Målare</p>
+            <p><img src="assets/bricks.png" class="icon">Murare</p>
+            <p><img src="assets/plunger.png" class="icon">Rörmokare</p>
+            <p><img src="assets/bolt.png" class="icon">Elektriker</p>
+        </div>
     </div>
 </body>
 
