@@ -157,6 +157,11 @@ tr:nth-child(even) {
     background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, rgb(50, 100, 120) 50%);
 }
 
+.blue-pink
+ {
+    background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, rgb(205, 150, 205) 50%);
+}
+
 .button-pos {
     display: flex;
     justify-content: flex-end;
