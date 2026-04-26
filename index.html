@@ -405,6 +405,12 @@
 
             <input type="text" class="search-bar">
         </div>
+        <div class="week-selection">
+            <button class="little-button">&lt;</button>
+            <p>Vecka 1-4</p>
+            <button class="little-button">></button>
+
+        </div>
         <table>
             <thead>
                 <tr is="vue:weeks-component"></tr>
@@ -416,7 +422,9 @@
                     :img="person.img" :schedule="person.schedule"></tr>
             </tbody>
         </table>
-        <button class="button">Lägg till bokning</button>
+        <div class="button-pos">
+            <button class="button">Lägg till bokning</button>
+        </div>
         <div class="availability">
             <p><u>Tillgänglighet:</u></p>
             <img src="assets/availability/free.png">
