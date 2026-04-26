@@ -88,7 +88,7 @@ td {
 }
 
 .pink-purple {
-    background: linear-gradient(to bottom, rgb(205, 150, 205), 50%, rgb(140, 70, 140) 50%);
+    background: linear-gradient(to bottom, rgb(205, 150, 205), 50%, rgb(148, 98, 157) 50%);
 }
 
 .pink-white {
@@ -107,6 +107,13 @@ td {
     height: 2rem;
     border-radius: 0.5rem;
     background-color: rgb(255, 142, 171);
+}
+
+.availability {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
 }
 
 .occupations {
