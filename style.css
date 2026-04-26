@@ -91,35 +91,43 @@ th {
     width: 10rem;
 }
 
-.blue-white {
+.blue-white, 
+#booked-50{
     background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, white 50%);
 }
 
-.pink {
+.pink,
+#preli-100 {
     background-color: rgb(205, 150, 205);
 }
 
-.gray {
+.gray,
+#absence {
     background-color: rgb(140, 150, 155);
 }
 
-.blue {
+.blue, 
+#booked-100 {
     background-color: rgb(78, 135, 155);
 }
 
-.white {
+.white, 
+#free {
     background-color: white;
 }
 
-.pink-purple {
+.pink-purple,
+#preli-50-50 {
     background: linear-gradient(to bottom, rgb(205, 150, 205), 50%, rgb(148, 98, 157) 50%);
 }
 
-.pink-white {
+.pink-white,
+#preli-50 {
     background: linear-gradient(to bottom, rgb(205, 150, 205), 50%, white 50%);
 }
 
-.blue-blue {
+.blue-blue,
+#booked-50-50 {
     background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, rgb(50, 100, 120) 50%);
 }
 
@@ -142,6 +150,28 @@ th {
     display: flex;
     justify-content: space-between;
 }
+
+.availability-type{
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+
+.availability-color-box{
+    height: 23px;
+    width: 47px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+
+.availability-description{
+    font-size: 0.75rem;
+}
+    
 
 .occupations {
     width: 60%;
