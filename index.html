@@ -22,44 +22,8 @@
 
 <body>
     <div id="app">
-        <img src="assets/icons/logo.png" class="logo" alt="Svennsons hantverk AB">
-        <img src="assets/icons/user.png" class="user" alt="Säljare">
-        <img src="assets/icons/cog.png" class="cog" alt="Inställningar">
-        <div class="top-bar">
-            <label for="job">Yrkesroller
-                <select id="job" name="job" class="dropdown">
-                    <option value="all">Alla</option>
-                    <option value="carpenter">Snickare</option>
-                    <option value="electrician">Elektriker</option>
-                    <option value="painter">Målare</option>
-                    <option value="bricker">Murare</option>
-                    <option value="plumber">Rörmokare</option>
-                </select>
-            </label>
+        <header-component></header-component>
 
-            <label for="availability">Tillgänglighet
-                <select id="availability" name="availability" class="dropdown">
-                    <option value="all">Alla</option>
-                    <option value="free">Ledig</option>
-                    <option value="50%">Bokad 50%</option>
-                    <option value="100%">Bokad 100%</option>
-                    <option value="p50%">Preliminär 50%</option>
-                    <option value="p100%">Preliminär 100%</option>
-                    <option value="absent">Frånvaro</option>
-                </select>
-            </label>
-
-            <div class="search-wrapper">
-                <input type="text" class="search-bar">
-                <img src="assets/icons/search.png" class="search-icon" alt="sök">
-            </div>
-        </div>
-        <div class="week-selection">
-            <button class="little-button">&lt;</button>
-            <p>Vecka 1-4</p>
-            <button class="little-button">></button>
-
-        </div>
         <table>
             <thead>
                 <tr is="vue:weeks-component"></tr>
@@ -71,53 +35,12 @@
                     :img="person.img" :schedule="person.schedule"></tr>
             </tbody>
         </table>
-        <div class="button-pos">
-            <button class="button">Lägg till bokning</button>
-        </div>
-        <div class="availability">
-            <p><u>Tillgänglighet:</u></p>
-            <div class="availability-type">
-                <div class="availability-color-box" id="free"></div>
-                <p class="availability-description">Ledig</p>
-            </div>
-            <div class="availability-type">
-                <div class="availability-color-box" id="booked-50"></div>
-                <p class="availability-description">Bokad 50%</p>
-            </div>
-            <div class="availability-type">
-                <div class="availability-color-box" id="booked-50-50"></div>
-                <p class="availability-description">Bokad 50% / 50%</p>
-            </div>
-            <div class="availability-type">
-                <div class="availability-color-box" id="booked-100"></div>
-                <p class="availability-description">Bokad 100%</p>
-            </div>
-            <div class="availability-type">
-                <div class="availability-color-box" id="preli-50"></div>
-                <p class="availability-description">Preli bokad 50%</p>
-            </div>
-            <div class="availability-type">
-                <div class="availability-color-box" id="preli-50-50"></div>
-                <p class="availability-description">Preli bokad 50% / 50%</p>
-            </div>
-            <div class="availability-type">
-                <div class="availability-color-box" id="preli-100"></div>
-                <p class="availability-description">Preli bokad 100%</p>
-            </div>
-            <div class="availability-type">
-                <div class="availability-color-box" id="absence"></div>
-                <p class="availability-description">Frånvaro</p>
-            </div>
+        
+        <button-component></button-component>
 
-        </div>
-        <div class="occupations">
-            <p><u>Yrkesroller:</u></p>
-            <p><img src="assets/icons/hammer.png" class="icon" alt="snickare">Snickare</p>
-            <p><img src="assets/icons/paintbrush.png" class="icon" alt="Målare">Målare</p>
-            <p><img src="assets/icons/bricks.png" class="icon" alt="murare">Murare</p>
-            <p><img src="assets/icons/plunger.png" class="icon" alt="rörmokare">Rörmokare</p>
-            <p><img src="assets/icons/bolt.png" class="icon" alt="elektriker">Elektriker</p>
-        </div>
+        <availability-component></availability-component>
+
+        <occupations-component></occupations-component>
     </div>
 </body>
 

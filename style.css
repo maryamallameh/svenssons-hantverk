@@ -32,6 +32,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-items: center;
     margin-top: 6rem;
 }
 
@@ -53,6 +54,21 @@ body {
     border-radius: 20px;
     border: 1px solid #ccc;
 
+}
+
+.search-icon {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    pointer-events: none;
+    width: 100%;
+    height: 32px;
+    padding-right: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
 }
 
 .search-icon {
@@ -86,26 +102,35 @@ body {
 }
 
 table {
-    border-right: 1px solid grey;
+    border-right: 1px solid rgb(75, 75, 75);
     border-spacing: 0;
 }
 
 th,
 td {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(75, 75, 75);
     width: 3.4rem;
     height: 1.2rem;
     font-weight: normal;
     font-size: 0.8rem;
-
 }
 
 th {
-    border: 1px solid grey;
+    border: 1px solid rgb(75, 75, 75);
 }
 
 tr:nth-child(even) {
     background-color: #F5F5F5;
+}
+
+th:nth-child(5n + 1),
+td:nth-child(5n + 1) {
+    border-right: 1px solid rgb(75, 75, 75);
+}
+
+th:nth-child(5n + 2),
+td:nth-child(5n + 2) {
+    border-left: 1px solid rgb(75, 75, 75);
 }
 
 .name {
@@ -118,47 +143,59 @@ tr:nth-child(even) {
 }
 
 .blue-white,
+#booked-50,
 #booked-50 {
     background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, white 50%);
 }
 
 .pink,
+#preli-100,
 #preli-100 {
     background-color: rgb(205, 150, 205);
 }
 
 .gray,
+#absence,
 #absence {
     background-color: rgb(140, 150, 155);
 }
 
 .blue,
+#booked-100,
 #booked-100 {
     background-color: rgb(78, 135, 155);
 }
 
 .white,
+#free,
 #free {
     background-color: white;
 }
 
 .pink-purple,
+#preli-50-50,
 #preli-50-50 {
     background: linear-gradient(to bottom, rgb(205, 150, 205), 50%, rgb(148, 98, 157) 50%);
 }
 
 .pink-white,
+#preli-50,
 #preli-50 {
     background: linear-gradient(to bottom, rgb(205, 150, 205), 50%, white 50%);
 }
 
 .blue-blue,
+#booked-50-50,
 #booked-50-50 {
     background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, rgb(50, 100, 120) 50%);
 }
 
 .blue-pink
  {
+    background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, rgb(205, 150, 205) 50%);
+}
+
+.blue-pink {
     background: linear-gradient(to bottom, rgb(78, 135, 155), 50%, rgb(205, 150, 205) 50%);
 }
 
@@ -203,6 +240,25 @@ tr:nth-child(even) {
     font-size: 0.75rem;
 }
 
+
+.availability-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.availability-color-box {
+    height: 23px;
+    width: 47px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+}
+
+.availability-description {
+    font-size: 0.75rem;
+}
 
 .occupations {
     width: 60%;
