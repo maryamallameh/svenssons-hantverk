@@ -17,46 +17,13 @@
 }
 }
 </script>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="app.js"></script>
 </head>
 
 <body>
     <div id="app">
-        <img src="assets/icons/logo.png" class="logo">
-        <img src="assets/icons/user.png" class="user">
-        <img src="assets/icons/cog.png" class="cog">
-        <div class="top-bar">
-            <label for="job">Yrkesroller
-                <select id="job" name="job" class="dropdown">
-                    <option value="all">Alla</option>
-                    <option value="carpenter">Snickare</option>
-                    <option value="electrician">Elektriker</option>
-                    <option value="painter">Målare</option>
-                    <option value="bricker">Murare</option>
-                    <option value="plumber">Rörmokare</option>
-                </select>
-            </label>
+        <header-component></header-component>
 
-            <label for="availability">Tillgänglighet
-                <select id="availability" name="availability" class="dropdown">
-                    <option value="all">Alla</option>
-                    <option value="free">Ledig</option>
-                    <option value="50%">Bokad 50%</option>
-                    <option value="100%">Bokad 100%</option>
-                    <option value="p50%">Preliminär 50%</option>
-                    <option value="p100%">Preliminär 100%</option>
-                    <option value="absent">Frånvaro</option>
-                </select>
-            </label>
-
-            <input type="text" class="search-bar">
-        </div>
-        <div class="week-selection">
-            <button class="little-button">&lt;</button>
-            <p>Vecka 1-4</p>
-            <button class="little-button">></button>
-
-        </div>
         <table>
             <thead>
                 <tr is="vue:weeks-component"></tr>
@@ -68,28 +35,12 @@
                     :img="person.img" :schedule="person.schedule"></tr>
             </tbody>
         </table>
-        <div class="button-pos">
-            <button class="button">Lägg till bokning</button>
-        </div>
-        <div class="availability">
-            <p><u>Tillgänglighet:</u></p>
-            <img src="assets/availability/free.png">
-            <img src="assets/availability/50.png">
-            <img src="assets/availability/5050.png">
-            <img src="assets/availability/100.png">
-            <img src="assets/availability/p50.png">
-            <img src="assets/availability/p5050.png">
-            <img src="assets/availability/p100.png">
-            <img src="assets/availability/absent.png">
-        </div>
-        <div class="occupations">
-            <p><u>Yrkesroller:</u></p>
-            <p><img src="assets/icons/hammer.png" class="icon">Snickare</p>
-            <p><img src="assets/icons/paintbrush.png" class="icon">Målare</p>
-            <p><img src="assets/icons/bricks.png" class="icon">Murare</p>
-            <p><img src="assets/icons/plunger.png" class="icon">Rörmokare</p>
-            <p><img src="assets/icons/bolt.png" class="icon">Elektriker</p>
-        </div>
+        
+        <button-component></button-component>
+
+        <availability-component></availability-component>
+
+        <occupations-component></occupations-component>
     </div>
 </body>
 
